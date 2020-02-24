@@ -19,21 +19,52 @@ img {
 
 .navbar__btn {
     align-self: center;
-    border: 5px solid #645f5f;
+    padding: 1rem;
+    border: 8px solid #645f5f;
     cursor: pointer;
 }
 
+.navbar__btn: {
+
+}
+
 .bar1,.bar2,.bar3 {
-    width: 30px;
-    height: 5px;
-    margin: 0.5rem;
+    width: 50px;
+    height: 7px;
+    margin: 0.6rem;
     background: #645f5f;
     transition: all 2s ease;
 }
 
+.change {
+    border: 8px solid #16163e;
+    transition:all 1.5s ease;
+}
+
+.change .bar1 {
+    transform: rotate(-45deg) translate(-11px, 14px);
+    background: #16163e;
+}
+.change .bar2 {
+    opacity: 0;
+}
+.change .bar3 {
+    transform: rotate(45deg) translate(-8px, -12px);
+    background: #16163e;
+}
+
+
 .navbar__links {
     list-style-type: none;
-    transition: all 2s ease;
+    transition: all 1.5s ease;
+    /*------*/
+    height: 0;
+    overflow: hidden;
+    border-bottom: 0.3rem solid #645f5f;
+}
+
+.navbar__collapse{
+    height: 240px;
 }
 
 .navbar__single-link {
@@ -52,12 +83,15 @@ img {
     padding-left: 1.5rem;
     background: #00830f;
     color: #16163e;
+    font-size: 1.70rem;
 }
 
 
 header {
     min-height: calc(100vh - 91.8px);
-    background: url('./img/background.jpg') center/cover no-repeat;   
+    background: url('./img/background.jpg') no-repeat;
+    background-size: cover;
+    transform: scalex(-1);
 }
 
 
